@@ -1,0 +1,55 @@
+/*
+ * Copyright (c) 2026 Cup Compass. All rights reserved.
+ * Global design tokens — espresso/copper/moss palette, Bitter/Karla/Fira Code type system.
+ */
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Bitter', ui-serif, Georgia, serif;
+  --font-body: 'Karla', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Fira Code', ui-monospace, 'Cascadia Code', monospace;
+
+  --color-espresso: #2a1e17;
+  --color-panel: #332419;
+  --color-cream: #f7efe5;
+  --color-copper: #c1652f;
+  --color-copper-light: #d98252;
+  --color-moss: #5c6b47;
+  --color-moss-light: #7a8c5f;
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-espresso);
+    color: var(--color-cream);
+    font-family: var(--font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  code, .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@keyframes bloom-pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
