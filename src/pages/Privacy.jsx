@@ -18,10 +18,10 @@ export function Privacy() {
           <p>
             Cup Compass does not require an account to use the Brew Profile quiz or view
             matches. Your quiz answers are stored temporarily in your browser session and are
-            not tied to a persistent identity. We collect standard analytics data (pages
-            viewed, approximate location, device type) and, when you click an outbound product
-            link, whether that click occurred — this is how affiliate partners attribute
-            commissions.
+            not tied to a persistent identity. We use Google Analytics (GA4) to collect
+            standard analytics data (pages viewed, approximate location, device type) and,
+            when you click an outbound product link, whether that click occurred — this is how
+            affiliate partners attribute commissions.
           </p>
         </section>
         <section>

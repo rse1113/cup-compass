@@ -10,12 +10,12 @@ This is the checklist for what to do manually, split per the brief: **today** vs
 - [ ] **Skimlinks** — already active (Publisher ID `305387X179359` is wired into
       `.env.example` / `merchants` seed data as the catch-all fallback). Log in at
       skimlinks.com and confirm `cupcompass.com` is added/verified as a site on the account.
-- [ ] **Amazon Associates** — apply at Amazon's Associates Program signup. Covers grinders,
-      drip machines, and K-cup products. Once approved, add the associate tag to the
-      `myespressoshop`... (n/a — Amazon isn't in the `merchants` seed since it's a
-      marketplace, not a single merchant row; when approved, add a `merchants` row per
-      Amazon-sold product category with `network = 'amazon_associates'` and your tag as
-      `affiliate_id`).
+- [x] **Amazon Associates** — approved. Tracking ID `cupcompass-20` is live in the
+      `merchants` table (`slug = 'amazon'`, `status = 'active'`,
+      `network = 'amazon_associates'`) via `supabase/migrations/0002_add_amazon_merchant.sql`.
+      Covers grinders, drip machines, and K-cup products. Products sold on Amazon should
+      point their `merchant_id` at this row, with the ASIN path (e.g. `dp/B0EXAMPLE`) in
+      `merchant_product_path`.
 - [ ] **Impact** — apply for Volcanica Coffee (~10%) and Coffee Bros (up to 25%) via
       Impact's partner marketplace. Once approved, update the `volcanica-coffee` and
       `coffee-bros` rows in `merchants`: set `status = 'active'`, fill in `affiliate_id`
